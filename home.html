@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit Risk Scorecard</title>
+    <script src="test.js"></script>
+
+
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css'>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="carousel.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="navbar-style.css">
+
+    <style>
+        .home {
+            background: #f12711; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #f12711, #f5af19); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #f12711, #f5af19); 
+        }
+
+        .btn {
+            border-radius: 500px;
+        }
+
+        .enroll-btn {
+            padding: 10px;
+            padding-left: 35px;
+            padding-right: 35px;
+            box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.302), 0 2px 6px 2px rgba(60, 64, 67, 0.149);
+            background-color: white;
+            color: #cc2b5e !important;
+            border: 0px;
+
+        }
+
+        .enroll-btn:hover {
+            background-color: rgb(32, 150, 32);
+            color: white !important;
+            border: 0px;
+        }
+
+        .infographic img {
+            width: 100%;
+        }
+
+        .center {
+            width: 100%;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+
+        .abc {
+            height: 100vh;
+        }
+
+        .courses-container {
+            padding-top: 50px;
+            background-color: #f1f1f1;
+            padding-bottom: 50px;
+        }
+
+        .card {
+            box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.302), 0 2px 6px 2px rgba(60, 64, 67, 0.149);
+            border-radius: 15px;
+        }
+
+        .card-img-top {
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+        }
+
+        .card-btn {
+            padding-top: 6px;
+            padding-bottom: 6px;
+            box-shadow: none;
+        }
+
+        @media (max-width: 960px) {
+            .infographic {
+                display: none;
+            }
+        }
+
+        .affix .login {
+            border-color: #cc2b5e;
+            color: #cc2b5e;
+        }
+
+        .affix .signup {
+            background-color: #cc2b5e;
+            color: white;
+        }
+
+        .affix .login:hover {
+            background-color: #cc2b5e;
+            color: white;
+        }
+
+        .affix .signup:hover {
+            background-color: #cc2b5e;
+            color: white;
+        }
+
+        .login:hover {
+            color: #cc2b5e;
+        }
+
+        .signup {
+            color: #cc2b5e;
+        }
+
+        .signup:hover {
+            color: #cc2b5e;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navBar">
+        <div class="container">
+            <div class="logoCustom">
+                <a href="#">Credit Risk Scorecard</a>
+            </div>
+            <div id="mainListDiv" class="main_list">
+
+            </div>
+
+        </div>
+    </nav>
+    <!-- LANDING PAGE -->
+    <div class="home full-height">
+        <div class="container abc">
+            <div class="row abc">
+                <div class="col-lg-5" style="color: white; margin-top: 40vh;">
+                    <p style="font-size: 1.7rem;"><b>One Step Closer To Check Your Score</b></p>
+                    <p style="font-size: 1.2rem;">
+                        Credit Risk Score Card will provide you the score.</p>
+                    <br>
+                    <a href="#tt"><button type="button" class="btn btn-outline-light enroll-btn">Check your
+                            score</button></a>
+                </div>
+                <div class="col-lg-7" style="margin-top: 25vh;">
+                    <div class="infographic">
+                        <img src="https://asiarecruit.com.my/includes/pics/asiarecruit-candidate-tips-interview.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="courses-container" id="tt">
+        <div class="container">
+
+            <div class="pt-4">
+                <center>
+                    <h3 style="font-size: 2.5rem; font-weight: 400;">Credit Risk Score card</h3>
+                </center>
+            </div>
+
+
+
+
+            <div class="d-flex">
+                <div class="col-6">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1">Name</span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+                            aria-describedby="basic-addon1">
+                    </div>
+
+                    <div class="form-check-inline">Residential Status
+
+                        <label class="form-check-label ml-5">
+                            <input type="radio" onclick='scoreRadio(this)' name='Residential Status' value='73'
+                                class="form-check-input" name="optradio">Home Owner
+
+                        </label>
+                    </div>
+                    <div class="form-check-inline">
+                        <label class="form-check-label">
+                            <input type="radio" onclick='scoreRadio(this)' name='Residential Status' value='62'
+                                class="form-check-input" name="optradio">Tenant
+                        </label>
+                    </div>
+                    <div class="form-check-inline">
+                        <label class="form-check-label">
+                            <input type="radio" onclick='scoreRadio(this)' name='Residential Status' value='91'
+                                class="form-check-input" name="optradio">Other
+                        </label>
+                    </div>
+                    <hr>
+                    <br>
+                    <div class="form-check-inline">Other Credit Card
+
+                        <label class="form-check-label ml-5">
+                            <input type="radio" onclick='scoreRadio(this)' name="Other Credit Card" value='76' class="form-check-input">Yes
+
+                        </label>
+                    </div>
+                    <div class="form-check-inline">
+                        <label class="form-check-label">
+                            <input type="radio"
+                                onclick='scoreRadio(this)' value='50' class="form-check-input" name="Other Credit Card">No
+                        </label>
+                    </div>
+
+
+
+                    <hr>
+                    <br>
+                    <div>
+
+                        <div class="form-check-inline">Employee Status
+
+                            <label class="form-check-label ml-5">
+                                <input type="radio" value='87' onclick='scoreRadio(this);showEducationQuestions(true);'
+                                    name='Employee Status'>Employed
+
+                            </label>
+                        </div>
+                        <div class="form-check-inline">
+                            <label class="form-check-label">
+                                <input type="radio" onclick='scoreRadio(this);showEducationQuestions(false);'
+                                    name='Employee Status' value='59'>Unknown
+                            </label>
+                        </div>
+
+                    </div>
+                    <hr>
+
+                    <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Income</label>
+                    <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref"
+                        onchange='scoreRadio(this)' name='Income'>
+                        <option value='0'>Choose...</option>
+                        <option value='31'>Up to 28999</option>
+                        <option value='57'>29000 to 32999</option>
+                        <option value='70'>33000 to 41999</option>
+                        <option value='82'>42000 to 46999</option>
+                        <option value='96'>47000 and up</option>
+                    </select>
+                    <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Age</label>
+                    <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref"
+                        onchange='scoreRadio(this)' name='Age'>
+                        <option value='0'>Choose...</option>
+                        <option value='53'>Upto 36</option>
+                        <option value='59'>37 to 39</option>
+                        <option value='67'>40 to 45</option>
+                        <option value='80'>46 to 57</option>
+                        <option value='99'>58 and up</option>
+                    </select>
+                    <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Time With Bank</label>
+                    <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref"
+                        onchange='scoreRadio(this)' name='Time With Bank'>
+                        <option value='0'>Choose...</option>
+                        <option value='51'>Up to 11 </option>
+                        <option value='61'>12 to 44</option>
+                        <option value='93'>45 to 70</option>
+                        <option value='133'>71 and up</option>
+                    </select>
+
+                    <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Average Montly Balance</label>
+                    <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref"
+                        onchange='scoreRadio(this)' name='Average Monthly Balance'>
+                        <option value='0'>Choose...</option>
+                        <option value='90'>Up to 558.87 </option>
+                        <option value='62'>558.88 to 1597.43</option>
+                        <option value='49'>1597.44 and up</option>
+
+                    </select>
+                </div>
+
+                <div class="col-6">
+                    <div class="d-flex flex-row">
+                        <div id='Residential Status' class="card invisible ml-3" style="width: 18rem;">
+                            <img class="card-img-top" src="https://i.ibb.co/M9KnBf2/4.png"
+                                alt="Card image cap">
+                            
+                            <div class="card-body px-2 py-4 text-center">
+                                <h6 class="card-title">Residential Status</h6>
+
+                                <span id='Residential Status'></span>
+                            </div>
+                            
+                        </div>
+                        <div id='Other Credit Card' class="card invisible ml-3" style="width: 18rem;">
+                            <img class="card-img-top" src="https://i.ibb.co/7YGDjb6/6.png"
+                                alt="Card image cap">
+                            <div class="card-body px-2 py-4 text-center">
+                                <h6 class="card-title"> Other Credit Card</h6>
+                                <span id='Other Credit Card'></span>
+                            </div>
+                        </div>
+                        <div id='Employee Status' class="card invisible ml-3" style="width: 18rem;">
+                            <img class="card-img-top" src="https://i.ibb.co/yVvJ0yP/5.png"
+                                alt="Card image cap">
+                            <div class="card-body px-2 py-4 text-center">
+                                <h6 class="card-title">Employee Status</h6>
+                                <span id='Employee Status'></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-row mt-3">
+
+                        <div id='Income' class="card invisible ml-3" style="width: 18rem;">
+                            <img class="card-img-top" src="https://i.ibb.co/BfdtbNH/7.png"
+                                alt="Card image cap">
+                            <div class="card-body px-2 py-4 text-center">
+                                <h6 class="card-title">Income</h6>
+                                <span id='Income'></span>
+                            </div>
+                        </div>
+                        <div id='Age' class="card invisible ml-3" style="width: 18rem;">
+                            <img class="card-img-top" src="https://i.ibb.co/346qd8G/1.png"
+                                alt="Card image cap">
+                            <div class="card-body px-2 py-4 text-center">
+                                <h6 class="card-title">Age</h6>
+                                <span id='Age'></span>
+                            </div>
+                        </div>
+                        <div id='Time With Bank' class="card invisible ml-3" style="width: 18rem;">
+                            <img class="card-img-top" src="https://i.ibb.co/SJnHkJ6/2.png"
+                                alt="Card image cap">
+                            <div class="card-body px-2 py-4 text-center">
+                                <h6 class="card-title">Time With Bank</h6>
+                                <span id='Time With Bank'></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex flex-row justify-content-center mt-3">
+
+                        <div id='Average Monthly Balance' class="card invisible ml-3" style="width: 10rem;">
+                            <img class="card-img-top" src="https://i.ibb.co/C1nJQmW/3.png"
+                                alt="Card image cap">
+                            <div class="card-body px-2 py-4 text-center">
+                                <h6 class="card-title">Average Monthly Balance</h6>
+                                <span id='Average Monthly Balance'></span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+
+
+            </div>
+
+        </div>
+
+
+    </div>
+ 
+    <div class="d-flex justify-content-center">
+        <canvas id="foo"></canvas>
+    </div>
+
+ 
+
+    <div style="width: 100%; text-align: center;">
+        <span id='final-score'></span>
+
+    </div>
+    <div class="mt-4" style="width: 100%; text-align: center;">
+    <div id="preview-textfield"></div>
+</div>
+</div>
+
+
+ 
+
+    <div class="jumbotron jumbotron-fluid mt-5 py-5 mb-0" style="background-color:#242424">
+            <div class="footer-copyright text-center text-white py-3">© 2021 Copyright :
+        <a href="#"> CreditRiskScoreCard </a>
+    </div>
+   </div>
+    <!-- Footer -->
+
+    <!-- fontawesome -->
+
+    <script src="gauge.js-gh-pages/gauge.js-gh-pages/dist/gauge.min.js"></script>
+    <script src="test.js">
+
+    </script>
+
+    <script>
+      
+        
+      var opts = {
+        angle: -0.03, // The span of the gauge arc
+  lineWidth: 0.3, // The line thickness
+  radiusScale: 0.88, // Relative radius
+  pointer: {
+    length: 0.67, // // Relative to gauge radius
+    strokeWidth: 0.082, // The thickness
+    color: '#000000' // Fill color
+  },
+  limitMax: false,     // If false, max value increases automatically if value > maxValue
+  limitMin: false,     // If true, the min value of the gauge will be fixed
+  colorStart: '#6F6EA0',   // Colors
+  colorStop: '#C0C0DB',    // just experiment with them
+  strokeColor: '#EEEEEE',  // to see which ones work best for you
+  generateGradient: true,
+  highDpiSupport: true,     // High resolution support
+  staticZones: [
+   {strokeStyle: "#F03E3E", min: 0, max: 410}, // Red from 100 to 130
+   {strokeStyle: "#FFDD00", min: 410, max: 499}, // Yellow light red
+   {strokeStyle: "#30B32D", min: 499, max: 650}, // Green
+]
+  
+};
+var target = document.getElementById('foo'); // your canvas element
+var gauge = new Gauge(target).setOptions(opts); // create sexy gauge!
+gauge.maxValue = 650; // set max gauge value
+gauge.setMinValue(0);  // Prefer setter over gauge.minValue = 0
+gauge.animationSpeed = 93; // set animation speed (32 is default value)
+gauge.set(0); // set actual value
+
+        function ff(){
+            var gs = document.getElementById('final-score').innerText;
+              console.log(gs);
+              gauge.set(finalScore);
+              if(finalScore<=410){
+                document.getElementById('preview-textfield').innerHTML = '<h3 class="pp"> You Default rate is too High, please kindly consult with your bank </h3>';
+
+              }
+              else if(finalScore>410 && finalScore<=499)
+              {
+                document.getElementById('preview-textfield').innerHTML = '<h3 class="pp"> You Default rate is High, Try to maintain your score </h3>';
+
+              }
+              else if(finalScore>499 && finalScore<=519)
+              {
+                document.getElementById('preview-textfield').innerHTML = '<h3 class="pp"> You Default rate is Moderate, But still  maintain your score to get better</h3>';
+
+              }
+              else{
+                document.getElementById('preview-textfield').innerHTML = '<h3 class="pp"> You are a good person you are not defaulting. Keep it up</h3>';
+
+              }
+        }
+
+    </script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <!-- Navbar Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+        $(window).scroll(function () {
+            if ($(document).scrollTop() > 50) {
+                $('.navBar').addClass('affix');
+                console.log("OK");
+            } else {
+                $('.navBar').removeClass('affix');
+            }
+        });
+
+        $('.navTriggerCustom').click(function () {
+            $(this).toggleClass('active');
+            console.log("Clicked menu");
+            $("#mainListDiv").toggleClass("show_list");
+            $("#mainListDiv").fadeIn();
+        });
+    </script>
+</body>
+
+</html>
