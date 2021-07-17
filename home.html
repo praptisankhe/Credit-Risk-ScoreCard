@@ -257,9 +257,9 @@
                         onchange='scoreRadio(this)' name='Age'>
                         <option value='0'>Choose...</option>
                         <option value='53'>Upto 36</option>
-                        <option value='59'>37 to 39</option>
-                        <option value='67'>40 to 45</option>
-                        <option value='80'>46 to 57</option>
+                        <option value='60'>37 to 39</option>
+                        <option value='68'>40 to 45</option>
+                        <option value='81'>46 to 57</option>
                         <option value='99'>58 and up</option>
                     </select>
                     <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Time With Bank</label>
@@ -267,7 +267,7 @@
                         onchange='scoreRadio(this)' name='Time With Bank'>
                         <option value='0'>Choose...</option>
                         <option value='51'>Up to 11 </option>
-                        <option value='61'>12 to 44</option>
+                        <option value='62'>12 to 44</option>
                         <option value='93'>45 to 70</option>
                         <option value='133'>71 and up</option>
                     </select>
@@ -435,21 +435,21 @@ gauge.set(0); // set actual value
               console.log(gs);
               gauge.set(finalScore);
               if(finalScore<=410){
-                document.getElementById('preview-textfield').innerHTML = '<h3 class="pp"> Your acquired score is at risk , Kindly consult with your bank. </h3>';
+                document.getElementById('preview-textfield').innerHTML = '<h3 class="pp"> Your acquired score is at risk , Kindly consult with your bank. </h3> <h4 class="pp"><b> Status : Default</b></h4>';
 
               }
               else if(finalScore>410 && finalScore<=499)
               {
-                document.getElementById('preview-textfield').innerHTML = '<h3 class="pp"> Your acquired score is mediocre , Work hard to bring up your score. </h3>';
+                document.getElementById('preview-textfield').innerHTML = '<h3 class="pp"> Your acquired score is mediocre , Work hard to bring up your score. </h3> <h4 class="pp"><b> Status : Default</b>';
 
               }
               else if(finalScore>499 && finalScore<=519)
               {
-                document.getElementById('preview-textfield').innerHTML = '<h3 class="pp"> Your acquired score is adequate, But still try to maintain your score to get it better</h3>';
+                document.getElementById('preview-textfield').innerHTML = '<h3 class="pp"> Your acquired score is adequate, But still try to maintain your score to get it better. </h3><h4 class="pp"><b> Status : Non Default</b>';
 
               }
               else{
-                document.getElementById('preview-textfield').innerHTML = '<h3 class="pp"> Your acquired score is Outstanding , Keep It Up. </h3>';
+                document.getElementById('preview-textfield').innerHTML = '<h3 class="pp"> Your acquired score is Outstanding , Keep It Up. </h3> <h4 class="pp"><b> Status : Non Default</b>';
 
               }
         }
