@@ -144,9 +144,10 @@
         <div class="container abc">
             <div class="row abc">
                 <div class="col-lg-5" style="color: white; margin-top: 40vh;">
-                    <p style="font-size: 1.7rem;"><b>One Step Closer To Check Your Score</b></p>
                     <p style="font-size: 1.2rem;">
-                        Credit Risk Score Card will provide you the score.</p>
+                        Is evaluating your own credit risk score difficult? We've got you covered..!</p>
+                    <p style="font-size: 1.7rem;"><b>One Step Closer To Check Your Score</b></p>
+                    <p style="font-size: 1.2rem;"><b>Monitor your score and Grasp the knowledge</b></p>
                     <br>
                     <a href="#tt"><button type="button" class="btn btn-outline-light enroll-btn">Check your
                             score</button></a>
@@ -165,7 +166,7 @@
 
             <div class="pt-4">
                 <center>
-                    <h3 style="font-size: 2.5rem; font-weight: 400;">Credit Risk Score card</h3>
+                    <h3 style="font-size: 2.5rem; font-weight: 400;">Credit Risk Assessment</h3>
                 </center>
             </div>
 
@@ -436,21 +437,21 @@ gauge.set(0); // set actual value
               console.log(gs);
               gauge.set(finalScore);
               if(finalScore<=410){
-                document.getElementById('preview-textfield').innerHTML = '<h3 class="pp"> You Default rate is too High, please kindly consult with your bank </h3>';
+                document.getElementById('preview-textfield').innerHTML = '<h3 class="pp"> Your acquired score is at risk , Kindly consult with your bank. </h3>';
 
               }
               else if(finalScore>410 && finalScore<=499)
               {
-                document.getElementById('preview-textfield').innerHTML = '<h3 class="pp"> You Default rate is High, Try to maintain your score </h3>';
+                document.getElementById('preview-textfield').innerHTML = '<h3 class="pp"> Your acquired score is mediocre , Work hard to bring up your score. </h3>';
 
               }
               else if(finalScore>499 && finalScore<=519)
               {
-                document.getElementById('preview-textfield').innerHTML = '<h3 class="pp"> You Default rate is Moderate, But still  maintain your score to get better</h3>';
+                document.getElementById('preview-textfield').innerHTML = '<h3 class="pp"> Your acquired score is adequate, But still try to maintain your score to get it better</h3>';
 
               }
               else{
-                document.getElementById('preview-textfield').innerHTML = '<h3 class="pp"> You are a good person you are not defaulting. Keep it up</h3>';
+                document.getElementById('preview-textfield').innerHTML = '<h3 class="pp"> Your acquired score is Outstanding , Keep It Up. </h3>';
 
               }
         }
