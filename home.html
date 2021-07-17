@@ -14,8 +14,6 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
     <link rel="stylesheet" href="carousel.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="navbar-style.css">
 
     <style>
@@ -23,6 +21,9 @@
             background: #f12711; /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #f12711, #f5af19); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #f12711, #f5af19); 
+        }
+        body{
+        font-family: 'Poppins', sans-serif;
         }
 
         .btn {
@@ -37,6 +38,7 @@
             background-color: white;
             color: #cc2b5e !important;
             border: 0px;
+            margin-top: 2rem;
 
         }
 
@@ -64,7 +66,7 @@
         }
 
         .courses-container {
-            padding-top: 50px;
+            padding-top: 5px;
             background-color: #f1f1f1;
             padding-bottom: 50px;
         }
@@ -122,6 +124,9 @@
         .signup:hover {
             color: #cc2b5e;
         }
+        .logocustom > a {
+            font-weight: 400;
+        }
     </style>
 </head>
 
@@ -143,11 +148,13 @@
     <div class="home full-height">
         <div class="container abc">
             <div class="row abc">
-                <div class="col-lg-5" style="color: white; margin-top: 40vh;">
-                    <p style="font-size: 1.2rem;">
-                        Is evaluating your own credit risk score difficult? We've got you covered..!</p>
+                <div class="col-lg-5" style="color: white; margin-top: 35vh;">
                     <p style="font-size: 1.7rem;"><b>One Step Closer To Check Your Score</b></p>
-                    <p style="font-size: 1.2rem;"><b>Monitor your score and Grasp the knowledge</b></p>
+
+                    <p style="font-size: 1.3rem;">
+                        Is evaluating your own credit risk score difficult? We've got you covered..!</p>
+
+                    <p style="font-size: 1.2rem;">Monitor your score and Grasp the knowledge</p>
                     <br>
                     <a href="#tt"><button type="button" class="btn btn-outline-light enroll-btn">Check your
                             score</button></a>
@@ -173,15 +180,9 @@
 
 
 
-            <div class="d-flex">
-                <div class="col-6">
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" id="basic-addon1">Name</span>
-                        </div>
-                        <input type="text" class="form-control" placeholder="Username" aria-label="Username"
-                            aria-describedby="basic-addon1">
-                    </div>
+            <div class="d-md-flex mt-3">
+                <div class="col-md-6 mt-3">
+                  
 
                     <div class="form-check-inline">Residential Status
 
@@ -204,7 +205,7 @@
                         </label>
                     </div>
                     <hr>
-                    <br>
+                    
                     <div class="form-check-inline">Other Credit Card
 
                         <label class="form-check-label ml-5">
@@ -222,20 +223,18 @@
 
 
                     <hr>
-                    <br>
                     <div>
 
-                        <div class="form-check-inline">Employee Status
+                        <div class="form-check-inline">Employee Status 
 
                             <label class="form-check-label ml-5">
-                                <input type="radio" value='87' onclick='scoreRadio(this);showEducationQuestions(true);'
-                                    name='Employee Status'>Employed
+                                <input type="radio" value='87' onclick='scoreRadio(this);' class="form-check-input" name='Employee Status'>Employed
 
                             </label>
                         </div>
                         <div class="form-check-inline">
                             <label class="form-check-label">
-                                <input type="radio" onclick='scoreRadio(this);showEducationQuestions(false);'
+                                <input type="radio" onclick='scoreRadio(this);' class="form-check-input"
                                     name='Employee Status' value='59'>Unknown
                             </label>
                         </div>
@@ -284,9 +283,9 @@
                     </select>
                 </div>
 
-                <div class="col-6">
+                <div class="col-md-6">
                     <div class="d-flex flex-row">
-                        <div id='Residential Status' class="card invisible ml-3" style="width: 18rem;">
+                        <div id='Residential Status' class="card invisible ml-md-3" style="width: 18rem;">
                             <img class="card-img-top" src="https://i.ibb.co/M9KnBf2/4.png"
                                 alt="Card image cap">
                             
@@ -347,7 +346,7 @@
                         <div id='Average Monthly Balance' class="card invisible ml-3" style="width: 10rem;">
                             <img class="card-img-top" src="https://i.ibb.co/C1nJQmW/3.png"
                                 alt="Card image cap">
-                            <div class="card-body px-2 py-4 text-center">
+                            <div class="card-body px-2 py-1 text-center">
                                 <h6 class="card-title">Average Monthly Balance</h6>
                                 <span id='Average Monthly Balance'></span>
                             </div>
@@ -371,7 +370,6 @@
         <canvas id="foo"></canvas>
     </div>
 
- 
 
     <div style="width: 100%; text-align: center;">
         <span id='final-score'></span>
@@ -426,7 +424,7 @@
   
 };
 var target = document.getElementById('foo'); // your canvas element
-var gauge = new Gauge(target).setOptions(opts); // create sexy gauge!
+var gauge = new Gauge(target).setOptions(opts); 
 gauge.maxValue = 650; // set max gauge value
 gauge.setMinValue(0);  // Prefer setter over gauge.minValue = 0
 gauge.animationSpeed = 93; // set animation speed (32 is default value)

@@ -45,7 +45,7 @@ function scoreRadio(el) {
       alt="Card image cap">
   
   <div class="card-body px-2 py-4 text-center">
-      <h6 class="card-title">`+p+`</h6>
+      <h6 class="card-title"><b>`+p+`<b></h6>
 
       <span id='`+p+`'>`+a+`</span>
   </div>
