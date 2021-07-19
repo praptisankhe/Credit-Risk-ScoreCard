@@ -21,7 +21,7 @@ function scoreTest() {
             finalScore += parseInt(scoreArr[i])
         }
     }
-    document.getElementById('final-score').innerHTML = '<h1 class="pp"> Your Score : ' + finalScore + '</h1>';
+    document.getElementById('final-score').innerHTML = '<h5 class="pp"><b> Your Score : ' + finalScore + '</b></h5>';
     ff(); 
     var passMsg = 'As the pass mark for the ' + visa + ' is ' + threshold + ', '
     if (finalScore >= threshold) {
@@ -44,7 +44,7 @@ function scoreRadio(el) {
   <img class="card-img-top" src="`+mysrc+`"
       alt="Card image cap">
   
-  <div class="card-body px-2 py-4 text-center">
+  <div class="card-body px-2 py-2 text-center">
       <h6 class="card-title"><b>`+p+`<b></h6>
 
       <span id='`+p+`'>`+a+`</span>
